@@ -8,8 +8,7 @@ function App() {
     
       
       <div className="App">
-        <h1> Pokemon App </h1>
-       
+        
         <PokemonSearch />
       </div>
   )

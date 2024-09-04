@@ -1,99 +1,311 @@
-h1{
-    background-color: #273239;
-    color: #ffce00;
-    padding-top: 25px;
-    padding-bottom: 25px;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-h3{
-    font-size: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* This makes the main content take up the remaining space */
+}
+
+h1 {
+  background-color: #273239;
+  color: #ffce00;
+  padding-top: 1.875rem; 
+  padding-bottom: 1.5625rem; 
+  margin-top: 0;
+  font-size: 5rem; 
+}
+
+h3 {
+  font-size: 1.5625rem; 
+  margin-top: 0.625rem; 
+  margin-bottom: 0.625rem; 
+}
+
+.pokiInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.25rem;
+  border: 0.125rem solid #000; 
+  padding: 0.9375rem; 
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+  background-color: #fff;
+  border-radius: 0.625rem;
+}
+
+.pokiInfo p {
+  font-size: 1.25rem;
+  margin-top: 0; 
+  margin-bottom: 0.625rem; 
+  font-weight: bold;
+}
+
+.info input {
+  border-radius: 2.5rem; 
+  height: 1.5625rem; 
+}
+
+.pokiBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pokiInfo img {
+  width: 10.625rem; 
+  height: 10.625rem; 
+}
+
+.btm {
+  color: #555555;
+  font-size: 1.125rem; 
+  border-radius: 1.25rem; 
+  width: 9.375rem; 
+  height: 1.875rem; 
+  font-weight: bold;
+  border: 0.125rem solid #555555; 
+  transition: 0.3s;
+  box-shadow: 0 0.375rem 0 -0.125rem rgba(67, 145, 209, 1); 
+  background-color: #ffce00;
+}
+
+.btm:hover {
+  box-shadow: 0 0 #fff;
+  transform: translateY(0.0625rem); 
+}
+
+.pokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 0.3125rem; 
+  width: 40%;
+  height: auto;
+  justify-content: center;
+  align-items: start;
+  background-color: rgb(202, 196, 189);
+  border: #273239;
+  border-radius: 0.625rem; 
+  border: 0.125rem solid #000; 
+  padding: 0.3125rem; 
+}
+
+.pokemonCard {
+  border: 0.0625rem solid #ccc; 
+  padding: 0.625rem; 
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 0.625rem; 
 }
 
 
-.pokiInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    border: 2px solid #000; /* Add a border */
-    padding: 15px; /* Add some padding inside the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-    background-color: #fff; /* Optional: Add a background color */
-    border-radius: 10px; /* Optional: Rounded corners */
-}
-.pokiInfo p{
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-.info input{
-    border-radius: 40px;
-    height: 25px;
+
+.pokemonImage {
+  width: 8.75rem; 
+  height: 8.75rem; 
 }
 
-.pokiBox{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    width: 100%;
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
 }
 
-.pokiInfo img{
-    width: 170px;
-    height: 170px;
+.pokiBox.placeholder {
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
 }
 
-.btm{
-    color: #555555;
-    font-size: 18px;
-    border-radius: 20px;
-    width: 150px;
-    height: 30px;
-    font-weight: bold;
-    border: 2px solid #555555;
-    transition: 0.3s;
-    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
-    background-color: #ffce00;
-  }
-  
-  .btm:hover {
-    box-shadow: 0 0 #fff;
-    transform: translateY(1px);
+.pokemonCard p {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Arial';
+  margin: 0;
+}
+
+.addBtm {
+  color: #555555;
+  margin-top: 0.3125rem; 
+  border-radius: 1.25rem; 
+  width: 6.25rem; 
+  height: 1.25rem; 
+  font-weight: bold;
+  border: 0.125rem solid #555555; 
+  transition: 0.3s;
+  box-shadow: 0 0.375rem 0 -0.125rem rgba(67, 145, 209, 1); 
+  background-color: #ffce00;
+}
+
+.addBtm:hover {
+  box-shadow: 0 0 #fff;
+  transform: translateY(0.0625rem); 
+}
+
+.error {
+  color: red;
+  margin-top: 0.625rem;
+}
+
+.max-pokemon {
+  color: orange;
+  margin-top: 0.625rem;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.625rem; 
+}
+
+.remove-btn svg {
+  fill: red;
+  width: 1.5rem; 
+  height: 1.5rem; 
+}
+
+.remove-btn:hover {
+  background-color: white;
+}
+
+.remove-btn:hover svg {
+  fill: darkred;
+}
+
+.empty-grid-message {
+  color: blue;
+  font-size: 1.125rem; 
+  text-align: center;
+  margin-top: 1.25rem; 
+}
+
+.footer {
+  background-color: #273239;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+
+
+/* Specific media query for iPad Pro 12.9" and similar sizes */
+@media screen and (max-width: 1024px) and (min-height: 1366px) {
+  h1 {
+    font-size: 3rem;
   }
 
   .pokemonGrid {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    gap: 10px;
-    height: 200px;
-    margin-top: 200px;
-    width: auto;
-    justify-content: center;
-    align-items: baseline;
-    background-color: antiquewhite;
-    border: #273239;
-  }
-  
-  .pokemonCard {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
-  }
-  
-  .pokemonImage {
-    width: 100px;
-    height: 100px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    width: 80%; /* Full width */
+    gap: 1rem; /* Add some gap between grid items */
+    margin: 0 auto; /* Center the grid */
   }
 
-  .grid-container{
-    display: flex;
-  justify-content: center;
-  align-items: flex-end; /* Align items to the bottom */
-  width: 100%; /* Full width */
+  .pokemonCard p {
+    font-size: 0.6rem;
+    margin: 0;
   }
+}
+
+/* General media query for tablets and smaller devices */
+@media screen and (max-width: 853px) and (min-height: 1100px){
+  h1 {
+    font-size: 3rem;
+  }
+
+  .pokemonGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    width: 80%; /* Full width */
+    gap: 1rem; /* Add some gap between grid items */
+    margin: 0 auto; /* Center the grid */
+  }
+}
+
+
+
+/* Specific media query for iPhone 12/12 Pro and similar sizes */
+@media screen and (max-width: 390px) and (min-height: 844px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .pokemonGrid {
+    grid-template-columns: 1fr; /* 1 column */
+    width: 100%; /* Full width */
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+}
+
+
+/* Specific media query for iPhone 6/7/8 and similar sizes */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .pokemonGrid {
+    grid-template-columns: 1fr; /* 1 column */
+    width: 100%; /* Full width */
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+}
+
+/* Specific media query for iPhone X/XS and similar sizes */
+@media screen and (max-width: 375px) and (min-height: 812px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .pokemonGrid {
+    grid-template-columns: 1fr; /* 1 column */
+    width: 100%; /* Full width */
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+}
+
+/* Specific media query for iPhone XR/11 and similar sizes */
+@media screen and (max-width: 430px) and (min-height: 896px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .pokemonGrid {
+    grid-template-columns: 1fr; /* 1 column */
+    width: 100%; /* Full width */
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+
+}
+@media screen and (max-width: 768px) and (min-height: 1024px) {
+  h1 {
+    font-size: 2rem; /* Adjust font size for iPad Mini */
+  }
+
+  .pokemonGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    width: 90%; /* Adjust width for iPad Mini */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
