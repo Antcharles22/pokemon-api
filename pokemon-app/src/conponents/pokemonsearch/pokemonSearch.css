@@ -1,6 +1,8 @@
 html, body {
   height: 100%;
   margin: 0;
+ overflow: auto; /* Ensure the page is scrollable */
+  
 }
 
 .container {
@@ -77,6 +79,7 @@ h3 {
   transition: 0.3s;
   box-shadow: 0 0.375rem 0 -0.125rem rgba(67, 145, 209, 1); 
   background-color: #ffce00;
+  margin-left: 0.1rem;
 }
 
 .btm:hover {
@@ -137,7 +140,7 @@ h3 {
 
 .addBtm {
   color: #555555;
-  margin-top: 0.3125rem; 
+  margin-top: 0.5rem; 
   border-radius: 1.25rem; 
   width: 6.25rem; 
   height: 1.25rem; 
@@ -146,6 +149,7 @@ h3 {
   transition: 0.3s;
   box-shadow: 0 0.375rem 0 -0.125rem rgba(67, 145, 209, 1); 
   background-color: #ffce00;
+  margin-bottom: 0.5rem;
 }
 
 .addBtm:hover {
@@ -197,12 +201,17 @@ h3 {
   padding: 1rem;
   text-align: center;
   color: white;
+  margin-top: 1rem;
 }
 
 
 
 /* Specific media query for iPad Pro 12.9" and similar sizes */
 @media screen and (max-width: 1024px) and (min-height: 1366px) {
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+
   h1 {
     font-size: 3rem;
   }
@@ -223,7 +232,11 @@ h3 {
 }
 
 /* General media query for tablets and smaller devices */
-@media screen and (max-width: 853px) and (min-height: 1100px){
+@media screen and (max-width: 853px) and (min-height: 1180px){
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+  
   h1 {
     font-size: 3rem;
   }
@@ -233,8 +246,8 @@ h3 {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     grid-template-rows: repeat(3, auto); /* 3 rows */
     width: 80%; /* Full width */
-    gap: 1rem; /* Add some gap between grid items */
-    margin: 0 auto; /* Center the grid */
+    gap: 0.5rem; /* Add some gap between grid items */
+    overflow:visible;
   }
 }
 
@@ -242,13 +255,17 @@ h3 {
 
 /* Specific media query for iPhone 12/12 Pro and similar sizes */
 @media screen and (max-width: 390px) and (min-height: 844px) {
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+  
   h1 {
     font-size: 2.5rem;
   }
 
   .pokemonGrid {
     grid-template-columns: 1fr; /* 1 column */
-    width: 100%; /* Full width */
+    width: 90%; /* Full width */
     margin-left: 1.5%;
     margin-right: 1.5%;
   }
@@ -257,13 +274,17 @@ h3 {
 
 /* Specific media query for iPhone 6/7/8 and similar sizes */
 @media screen and (max-width: 600px) {
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+
   h1 {
     font-size: 2.5rem;
   }
 
   .pokemonGrid {
     grid-template-columns: 1fr; /* 1 column */
-    width: 100%; /* Full width */
+    width: 80%; /* Full width */
     margin-left: 1.5%;
     margin-right: 1.5%;
   }
@@ -271,13 +292,17 @@ h3 {
 
 /* Specific media query for iPhone X/XS and similar sizes */
 @media screen and (max-width: 375px) and (min-height: 812px) {
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+ 
   h1 {
     font-size: 2.5rem;
   }
 
   .pokemonGrid {
     grid-template-columns: 1fr; /* 1 column */
-    width: 100%; /* Full width */
+    width: 90%; /* Full width */
     margin-left: 1.5%;
     margin-right: 1.5%;
   }
@@ -285,27 +310,47 @@ h3 {
 
 /* Specific media query for iPhone XR/11 and similar sizes */
 @media screen and (max-width: 430px) and (min-height: 896px) {
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+ 
   h1 {
     font-size: 2.5rem;
   }
 
   .pokemonGrid {
+    display: grid;
     grid-template-columns: 1fr; /* 1 column */
-    width: 100%; /* Full width */
+    width: 92%; /* Full width */
     margin-left: 1.5%;
     margin-right: 1.5%;
   }
-
+   .footer {
+    margin-top: 1rem; /* Add some margin at the top */
+    margin-top: 1rem;
+   }
 }
+
+
 @media screen and (max-width: 768px) and (min-height: 1024px) {
+  html, body {
+    overflow: auto; /* Ensure the page is scrollable */
+  }
+  
   h1 {
     font-size: 2rem; /* Adjust font size for iPad Mini */
   }
 
   .pokemonGrid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     width: 90%; /* Adjust width for iPad Mini */
+    height: auto;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 3rem; /* Add some margin at the top */
+  }
+  .footer {
+    margin-top: 1rem; /* Add some margin at the top */
   }
 }
